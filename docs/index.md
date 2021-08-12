@@ -144,7 +144,7 @@ If the Pods in cluster **Y** were to once again become healthy (liveness and rea
 The following load balancing strategies, as it relates to resolving Ingress node IPs, should be provided as part of the initial implementation:
 * **Round robin**
 * **Failover**
-* **GeoIP**
+* **geoip**
 
 see [strategies](strategy.md) for details.
 
