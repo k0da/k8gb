@@ -12,18 +12,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: heinrichreimer/github-changelog-generator-action@v2.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          project: k8gb
-          pullRequests: true
-          author: true
-          issues: true
-          issuesWoLabels: true
-          prWoLabels: true
-          compareLink: true
-          filterByMilestone: true
-          unreleased: true
+      - name: Change changelog 
+        run: echo "change dunring run" >> changes
+      - name: Change changelog1 
+        run: cat changes CHANGELOG.md > CHANGELOG.md 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
