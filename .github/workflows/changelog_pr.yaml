@@ -15,7 +15,9 @@ jobs:
       - name: Change changelog 
         run: echo "change dunring run" >> changes
       - name: Change changelog1 
-        run: cat changes CHANGELOG.md > CHANGELOG.md 
+        run: cat changes CHANGELOG.md > CHANGELOG_new.md 
+      - name: Change changelog2 
+        run: mv CHANGELOG_new.md CHANGELOG.md 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
